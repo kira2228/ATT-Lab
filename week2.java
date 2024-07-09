@@ -18,11 +18,11 @@ public class week2 {
 		Actions builder=new Actions(driver);
 		
 		
-		WebElement customerLogin=driver.findElement(By.xpath("(//a[normalize-space()='Customer Login'])[2]"));
+		WebElement customerLogin=driver.findElement(By.xpath("/html/body/nav[2]/div/div[2]/ul/li[1]/a"));
 		builder.moveToElement(customerLogin).perform();
 		Thread.sleep(2000);
 		
-		WebElement register = driver.findElement(By.xpath("(//a[normalize-space()='Register'])[2]"));
+		WebElement register = driver.findElement(By.xpath("/html/body/nav[2]/div/div[2]/ul/li[1]/ul/li[2]/a"));
 		register.click();
 		Thread.sleep(2000);
 
@@ -31,7 +31,6 @@ public class week2 {
 		firstName.sendKeys("pooja");
 		Thread.sleep(2000);
 
-		
 
 		WebElement lastName=driver.findElement(By.id("acc_last_name"));
 		lastName.sendKeys("N");
@@ -44,8 +43,8 @@ public class week2 {
 
 		
 
-		WebElement setPassword=driver.findElement(By.id("acc_user_password"));
-		setPassword.sendKeys("1234pooja");
+		WebElement Password=driver.findElement(By.id("acc_user_password"));
+	    Password.sendKeys("1234pooja");
 		Thread.sleep(2000);
 		
 		
@@ -59,7 +58,7 @@ public class week2 {
 		Thread.sleep(2000);
 
 		
-		WebElement registerBtn=driver.findElement(By.xpath("(//button[normalize-space()='Register'])"));
+		WebElement registerBtn=driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/form/button"));
 		registerBtn.click();
 		Thread.sleep(1000);
 
